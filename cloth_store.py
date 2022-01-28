@@ -11,9 +11,9 @@ def dashboard():
 def orders():
     return render_template("orders.html")
 
-@app.route("/order/<order_id>")
+@app.route("/order/<int:order_id>")
 def order_detail(order_id):
-    if order_id == "sss":
+    if order_id is not None:
         return render_template("order_details.html", order_id=order_id)
     else:
         return orders()
