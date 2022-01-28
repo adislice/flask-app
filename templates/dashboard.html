@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ judul }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar" id="side">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img class="logo" src="{{ url_for('static', filename='logo-putih.svg') }}" alt="" srcset="">
+                </span>
+                <div class="text header-text">
+                    <span class="name">Fearless Cloth</span>
+                </div>
+                <a href="#" id="menu-close" onclick="toggle_menu()">
+                    <i class='icon bx bx-x'></i>
+                </a>
+            </div>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link active">
+                        <a href="#">
+                            <i class="icon bx bx-home-circle"></i>
+                            <i class="icon bx bxs-home-circle"></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon bx bx-file"></i>
+                            <i class="icon bx bxs-file"></i>
+                            <span class="text nav-text">Pesanan</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon bx bx-group"></i>
+                            <i class="icon bx bxs-group"></i>
+                            <span class="text nav-text">Kontak Supplier</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="icon bx bx-time"></i>
+                            <i class="icon bx bxs-time"></i>
+                            <span class="text nav-text">Riwayat Pesanan</span>
+                        </a>
+                    </li>
+                    <li class="nav-link toggle-mode">
+                        <a href="#" id="toggle-mode">
+                            <i class='icon bx bx-toggle-right toggle-icon'></i>
+                            <span class="text nav-text" id="toggle-text">Dark Mode</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main-body">
+        <div class="judul">
+            <a class="menu-icon" href="#" id="menu-toggle">
+                <i class='icon bx bx-menu'></i>
+            </a>
+            <span class="judul-text">Dashboard</span>
+            <i class="icon-ic_fluent_airplane_take_off_24_regular"></i>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
